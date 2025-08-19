@@ -16,11 +16,11 @@ pipeline {
         SONARQUBE_SERVER = 'MySonar'
         SONAR_PROJECT_KEY = 'PrithamTeja_simple-spring-api'
         SONAR_PROJECT_NAME = 'simple-spring-api'
-        SONAR_ORGANIZATION = 'PrithamTeja'
+        SONAR_ORGANIZATION = 'ashish-panicker'
         // --- Docker / Deploy ---
         APP_NAME              = 'simple-spring-api'
         // <username>/<repo>
-        DOCKER_IMAGE          = "teja2509/${APP_NAME}"    
+        DOCKER_IMAGE          = "ashishspanicker/${APP_NAME}"    
         CONTAINER_NAME        = 'simple-spring-api'
         // container port your app listens on
         APP_PORT              = '9595'                          
@@ -74,7 +74,7 @@ pipeline {
                         mvn sonar:sonar \
                         -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
                         -Dsonar.organization=${SONAR_ORGANIZATION} \
-                        -Dsonar.projectName=${SONAR_PROJECT_NAME} \
+                        -Dsonar.projectName=${SONAR_PROJECT_NAME}
                     """
                 }
             }
