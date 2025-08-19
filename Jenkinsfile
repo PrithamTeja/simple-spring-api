@@ -7,25 +7,25 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk-21'
-        maven 'maven-3.8.4'
+        jdk 'JDK-21'
+        maven 'Maven-3.8.4'
     }
 
     environment {
         // define the SonarQube server URL and credentials
-        SONARQUBE_SERVER = 'SonarCloud'
-        SONAR_PROJECT_KEY = 'ashish-panicker_simple-spring-api'
+        SONARQUBE_SERVER = 'MySonar'
+        SONAR_PROJECT_KEY = 'PrithamTeja_simple-spring-api'
         SONAR_PROJECT_NAME = 'simple-spring-api'
-        SONAR_ORGANIZATION = 'ashish-panicker'
+        SONAR_ORGANIZATION = 'PrithamTeja'
         // --- Docker / Deploy ---
         APP_NAME              = 'simple-spring-api'
         // <username>/<repo>
-        DOCKER_IMAGE          = "ashishspanicker/${APP_NAME}"    
+        DOCKER_IMAGE          = "teja2509/${APP_NAME}"    
         CONTAINER_NAME        = 'simple-spring-api'
         // container port your app listens on
         APP_PORT              = '9595'                          
         // Jenkins credential (username+password) for registry login
-        DOCKERHUB_CREDENTIALS = 'docker-credentials'
+        DOCKERHUB_CREDENTIALS = 'docker-hub'
         // Optional: set a host port different from container port (e.g., '9595:9595')
         HOST_PORT_MAPPING     = '9595:9595'
 
@@ -38,7 +38,7 @@ pipeline {
                 echo 'Cloning repository...'
                 // by default jenkins will use the master branch
                 // if you want to use a different branch, specify it here
-                git branch: 'main', url: 'https://github.com/ashish-panicker/simple-spring-api.git'
+                git branch: 'main', url: 'https://github.com/PrithamTeja/simple-spring-api.git'
             }
         }
 
