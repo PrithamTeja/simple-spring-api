@@ -4,7 +4,13 @@ pipeline {
     
     // use jenkins node as the agent
     // this means that the pipeline can run on any available agent
-    agent any
+   agent {
+        docker {
+            // Pre-baked Jenkins agent with JDK, Maven, Docker, az, kubectl
+            image 'teja2509/jenkins-agent:latest'
+            args '-u root:root'
+        }
+    }
 
     tools {
         jdk 'JDK-21'
