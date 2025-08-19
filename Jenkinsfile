@@ -16,7 +16,7 @@ pipeline {
         SONARQUBE_SERVER = 'MySonar'
         SONAR_PROJECT_KEY = 'PrithamTeja_simple-spring-api'
         SONAR_PROJECT_NAME = 'simple-spring-api'
-        SONAR_ORGANIZATION = 'PrithamTeja'
+        SONAR_ORGANIZATION = 'prithamteja'
         // --- Docker / Deploy ---
         APP_NAME              = 'simple-spring-api'
         // <username>/<repo>
