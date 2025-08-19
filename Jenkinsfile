@@ -20,7 +20,7 @@ pipeline {
         // --- Docker / Deploy ---
         APP_NAME              = 'simple-spring-api'
         // <username>/<repo>
-        DOCKER_IMAGE          = "PrithamTeja${APP_NAME}"    
+        DOCKER_IMAGE          = "prithamteja/${APP_NAME}"    
         CONTAINER_NAME        = 'simple-spring-api'
         // container port your app listens on
         APP_PORT              = '9595'                          
